@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Our found pets 😻</h1>
+
+  <div class="cards">
+    <% @pets.each do |pet| %>
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "https://source.unsplash.com/featured/?pet&#{rand(1..100)}", class: "card-img-top" %>
+        <div class="card-body">
+          <h2 class="card-text"><%= pet.name %></h2>
+          <p class="card-text">Found at <%= pet.address %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
